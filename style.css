@@ -1,0 +1,175 @@
+/* Reset e Configurações Gerais */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body { background-color: #000; color: white; text-align: center; overflow-x: hidden; }
+
+/* Imagens globais respeitam o container, mas classes específicas terão ajustes abaixo */
+img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+
+/* Container principal: limita a largura no PC para não ficar tudo esticado */
+.container { 
+    padding: 0 20px; 
+    max-width: 1000px; /* Ajuste para Notebook */
+    margin: 0 auto; 
+    position: relative;
+}
+
+/* Botões (CTA) */
+.btn-cta {
+    display: block;
+    width: 100%;
+    max-width: 400px; /* Trava o botão para não ficar gigante no PC */
+    background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(255,0,0,0.4);
+    border: 1px solid #ff3333;
+    transition: transform 0.2s;
+}
+.btn-cta:hover { transform: scale(1.05); }
+
+/* Header */
+header { background-color: black; padding: 15px 0; }
+.logo { height: 40px; width: auto; }
+
+/* Hero Section */
+.hero h1 { font-size: 1.8rem; text-transform: uppercase; margin-bottom: 15px; line-height: 1.2; font-weight: 800; margin-top: 20px; }
+.hero p { color: #ccc; font-size: 1rem; line-height: 1.5; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hero-img img { max-width: 600px; width: 100%; }
+
+/* Comparação */
+.alert-box { padding: 15px; font-weight: bold; font-size: 1.2rem; border-radius: 5px; margin: 10px auto; max-width: 600px; }
+.alert-box.red { background-color: #ff1a1a; }
+.alert-box.green { background-color: #4dff4d; color: black; }
+.big-price { font-size: 1.5rem; display: block; margin-top: 5px; font-weight: 900; }
+
+/* --- CORREÇÃO DOS LOGOS DE STREAMING --- */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 colunas = 2 linhas para 12 itens */
+    gap: 10px;
+    margin: 30px auto;
+    max-width: 800px;
+    justify-content: center;
+}
+
+.logos-grid img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* Trava o tamanho máximo de cada logo */
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    background: #111;
+    padding: 5px;
+}
+
+/* TV Futuro & Devices */
+.tv-futuro { margin-top: 40px; }
+.full-width-img { width: 100%; max-width: 800px; }
+.compatible-devices { padding: 20px; background: #111; margin-top: -5px; border-radius: 10px; }
+.icons-device { display: flex; justify-content: center; gap: 20px; font-size: 2rem; margin: 20px 0; color: #ccc; }
+.test-drive h2 { color: white; margin-bottom: 5px; }
+.test-drive p { font-size: 1.2rem; color: #fff; font-weight: bold; }
+.qr-img { width: 150px; margin-top: 10px; }
+
+/* App Showcase */
+.app-showcase { margin-top: 40px; }
+.mockup { max-width: 300px; margin: 0 auto; }
+.blue-strip { background: blue; color: white; font-weight: bold; padding: 5px 20px; display: inline-block; border-radius: 20px; margin: -20px auto 20px auto; position: relative; z-index: 10; }
+.desc-text { font-size: 0.9rem; color: #e0e0e0; line-height: 1.4; background: #b30000; padding: 20px; border-radius: 10px; margin-top: -40px; padding-top: 50px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* Web Showcase */
+.web-showcase { margin-top: 50px; }
+.web-showcase .mockup { max-width: 600px; }
+.black-strip { background: black; color: white; font-size: 1.2rem; padding: 10px; font-weight: bold; margin-top: -10px; position: relative; z-index: 10; }
+.red-box-text { background: #b30000; padding: 20px; font-size: 0.9rem; line-height: 1.4; margin-top: 10px; border-radius: 5px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* Depoimentos */
+.red-strip-title { background: #ff0000; color: white; font-weight: bold; text-transform: uppercase; font-size: 1.2rem; padding: 10px; margin-bottom: 20px; display: inline-block; width: 100%; max-width: 600px; }
+.reviews-grid img { margin-bottom: 10px; border-radius: 5px; width: 100%; max-width: 400px; }
+.subtitle { font-size: 0.9rem; margin-bottom: 15px; color: #ccc; max-width: 600px; margin: 0 auto 20px auto; }
+
+/* --- CORREÇÃO DO CARROSSEL DE FILMES --- */
+.content-gallery {
+    overflow: hidden;
+    padding: 20px 0;
+    background: #050505;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 250px; /* Altura fixa para não ocupar a tela toda */
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite; /* Animação ativada */
+}
+
+.carousel-track img {
+    height: 200px; /* Altura fixa do pôster (pequeno) */
+    width: auto;   /* Largura automática */
+    margin-right: 15px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+    max-width: none; /* Importante: impede o CSS global de esticar a imagem */
+}
+
+.carousel-track img:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    border: 2px solid white;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Categorias */
+.categories { margin-top: 40px; text-align: center; }
+.cat-item { margin-bottom: 40px; }
+.cat-item img { border-radius: 15px; border: 2px solid #333; margin-bottom: 15px; max-width: 350px; }
+.cat-item h3 { font-size: 1.4rem; margin-bottom: 10px; color: white; }
+.cat-item p { font-size: 0.9rem; color: #aaa; max-width: 300px; margin: 0 auto; }
+
+/* Planos */
+.pricing { background: #000; padding-bottom: 40px; }
+.plan-card { background: #111; margin-bottom: 30px; border-radius: 15px; overflow: hidden; border: 1px solid #333; max-width: 350px; margin: 0 auto 30px auto; }
+.plan-header { background: #000; padding: 20px; border-bottom: 1px solid #333; }
+.plan-header.red-bg { background: #cc0000; }
+.plan-header h4 { font-size: 0.8rem; letter-spacing: 3px; color: #fff; opacity: 0.7; }
+.plan-header h2 { font-size: 2rem; color: white; margin-top: 5px; }
+.plan-body { padding: 20px; text-align: left; }
+.plan-body p { font-size: 0.9rem; color: #ccc; text-align: center; margin-bottom: 20px; }
+.plan-body ul { list-style: none; }
+.plan-body li { margin-bottom: 10px; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+.plan-body li i { color: #00ff00; }
+.price-tag { font-size: 2.5rem; font-weight: bold; text-align: center; margin: 20px 0; color: white; }
+.btn-plan { display: block; background: linear-gradient(90deg, #ff0000, #800000); color: white; text-align: center; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.btn-plan:hover { background: white; color: #b30000; }
+
+/* Footer */
+footer { background: white; padding: 40px 20px; color: black; margin-top: 20px; }
+.piracy-badge { width: 120px; margin-bottom: 20px; }
+footer p { font-size: 0.8rem; line-height: 1.4; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.payment-methods { width: 200px; }
+
+/* Ajuste Mobile para os Logos */
+@media (max-width: 600px) {
+    .logos-grid {
+        grid-template-columns: repeat(4, 1fr); /* No celular muito pequeno, fica 3 linhas de 4 */
+    }
+}
